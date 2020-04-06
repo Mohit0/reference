@@ -1,0 +1,36 @@
+20	FTP -- Data
+21	FTP -- Control
+22	SSH Remote Login Protocol
+23	Telnet
+25	Simple Mail Transfer Protocol (SMTP)
+49	TACACS Login Host Protocol (Login)
+53	Domain Name System (DNS)
+69	Trivial File Transfer Protocol (TFTP)
+80	HTTP
+103	X.400 Standard
+109	POP2
+110	POP3
+115	Simple File Transfer Protocol (SFTP)
+137	NetBIOS Name Service
+138	NetBIOS Datagram Service
+139/150	NetBIOS Session Service
+143	Interim Mail Access Protocol (IMAP)	
+156	SQL Server
+161	SNMP
+162	SNMP TRAP
+179	Border Gateway Protocol (BGP)
+389	Lightweight Directory Access Protocol (LDAP)
+443	HTTPS
+445	Microsoft-DS (SMB)
+465	SMTP over SSL - CONFLICT with registered Cisco protocol (SMTP)
+500	ISAKMP, IKE-Internet Key Exchange
+546	DHCP Client
+547	DHCP Server
+587	Email message submission (SMTP)
+636	Lightweight Directory Access Protocol (LDAP) over TLS/SSL
+989/990	FTP over TLS/SSL (FTP - S)
+992	Telnet over TLS/SSL
+993	IMAP4 over SSL
+995	POP3 over SSL
+1080	Socks
+3389	Remote Desktop Protocol
