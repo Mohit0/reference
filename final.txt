@@ -131,7 +131,14 @@ tar xvf myAndroidBackup.tar
 	Reference:	http://nelenkov.blogspot.ca/2012/06/unpacking-android-backups.html
 
 
-Android Frida  -- https://github.com/mirfansulaiman/Command-Mobile-Penetration-Testing-Cheatsheet
+
+https://github.com/mirfansulaiman/Command-Mobile-Penetration-Testing-Cheatsheet
+
+Android Objection   -- 
+https://github.com/sensepost/objection/wiki/Patching-Android-Applications
+https://github.com/sensepost/objection/wiki/Using-objection
+
+Android Frida  -- 
 -- Install frida on android
 adb root 		## root required to run frida
 adb push frida-server /data/local/temp/
