@@ -131,7 +131,7 @@ tar xvf myAndroidBackup.tar
 	Reference:	http://nelenkov.blogspot.ca/2012/06/unpacking-android-backups.html
 
 
-Android Frida 
+Android Frida  -- https://github.com/mirfansulaiman/Command-Mobile-Penetration-Testing-Cheatsheet
 -- Install frida on android
 adb root 		## root required to run frida
 adb push frida-server /data/local/temp/
@@ -146,6 +146,27 @@ frida-ps -D <id>	# connect frida to a specific device
 frida-trace -U -f com.app.testing -I "libcommonCrypto*"  # crypto API calls
 
 frida-trace -U -i  open com.app.testing  ## trace every function while program start
+
+frida -U -l <script>.js --no-pause -f <application>
+
+
+Sample code: Root detection bypass example
+setTimeout(function() { 	// avoid java.lang.ClassNotFoundException
+	Java.perform(function() {		
+		var hook = Java.use("com.target.utils.RootCheck");     -- Rootcheck is name of the class
+		console.log("info: hooking RootCheck class");
+		hook.isRooted.overload().implementation = function() {   -- isRooted is the name of the function to be overloaded
+			console.log("info: entered target method");
+			
+			var retval = this.isRooted.overload().call(this);	// obtain old retval
+ 			console.log("old ret value: " + retval);		// set new retval
+			var retnew = false;
+			console.log("new ret value: " + retnew);
+			return retnew;
+		}
+	});   
+}, 0);
+
 
 http://th3-incognito-guy.blogspot.com/2014/09/drozer-security-attack-framework-for.html
 
