@@ -147,6 +147,8 @@ frida-trace -U -f com.app.testing -I "libcommonCrypto*"  # crypto API calls
 
 frida-trace -U -i  open com.app.testing  ## trace every function while program start
 
+http://th3-incognito-guy.blogspot.com/2014/09/drozer-security-attack-framework-for.html
+
 https://github.com/swdunlop/AndBug  - To enumerate class and method on application
 https://github.com/linkedin/qark    - Quick Android Review Kit 
  
