@@ -103,7 +103,9 @@ dotdotpwn.pl perl script
 
 Inurl:view index.shtml  //scan for CCTV information.
 
-Android Application Testing
+Android Application Testing:
+SSL Pinning is a technique that we use in the client side to avoid man-in-the-middle attack by validating the server certificates again even after SSL handshaking. The developers embed (or pin) a list of trustful certificates to the client application during development, and use them to compare against the server certificates during runtime. If there is a mismatch between the server and the local copy of certificates, the connection will simply be disrupted, and no further user data will be even sent to that server. This enforcement ensures that the user devices are communicating only to the dedicated trustful servers.
+
 adb tcpip 5555
 adb connect 
 adb shell ps
