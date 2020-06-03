@@ -21,9 +21,12 @@ https://www.owasp.org/images/2/20/Microservice_Security.pdf				--Microservice pe
 OGNL expression injection <>!@#$%^&*()_+=-}{[]|\;:'",.?/
 Object-Graph Navigation Language (OGNL) is an expression language for handling Java objects. When an OGNL expression injection vulnerability is present, it is possible for the attacker to inject OGNL expressions. These expressions can execute arbitrary Java code.
 Searching for this vulnerability in a black box environment is easy, and have the same approach as searching for SSTI vulnerabilities. We can inject OGNL expressions in all user supplied data fields and see if we get any response back indicating that the expression has been handled and executed on the server.
-An example of an expression to use could be as simple as:	foobar%{191*7}
+An example of an expression to use could be as simple as:	foobar%{{191*7}}
 where %{191*7}is the expression. The output from this would be 1337. These expressions can of course be something other than just mathematical, but this is a way to easily detect the vulnerability.
 
+OGNL using jabva template injection, to reproduce append:
+?redirect:Un${{class.getClassLoader().toString()}}successful
+?redirectAction:Un${{class.getCanonicalName().toString()}}successful
 
 
 SSL Certificates are small data files that digitally bind a cryptographic key to an organization’s details. When installed on a web server, it activates the padlock and the https protocol (over port 443) and allows secure connections from a web server to a browser. Typically, SSL is used to secure credit card transactions, data transfer and logins, and more recently is becoming the norm when securing browsing of social media sites. SSL Certificates bind together:
